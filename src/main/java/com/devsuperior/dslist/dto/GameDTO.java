@@ -21,6 +21,7 @@ public class GameDTO {
 	
 	public GameDTO(Game entity) {
 		// Copia os dados do objeto game para o dto. Irá funcionar porque as duas classes tem os atributos com mesmo nome
+		// Ao usar o BeanUtils, precisa gerar os getters e setters. Caso faça manualmente, igual na GameListDTO, pode gerar só os getters
 		BeanUtils.copyProperties(entity, this);
 	}
 	
